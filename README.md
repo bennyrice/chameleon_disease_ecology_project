@@ -5,7 +5,8 @@ Benjamin Rice
 b.rice@princeton.edu
 Repository initialized: 11 November 2024
 
-# Contents
+## Contents
+
 #### `2024_recruitment`
 - Flyer and project description for recruiting students/research assistants
 
