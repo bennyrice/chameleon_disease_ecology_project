@@ -54,8 +54,8 @@ p1 <- df1 %>%
         strip.text = element_text(angle = 90))
 p1
 
-# Furcifer rhinoceratus
-p.rhino <- df1 %>%
+# Furcifer rhinoceratus by mass
+p.rhino.m <- df1 %>%
   filter(species == "Furcifer rhinoceratus") %>%
   ggplot(aes(x = sex, y = mass_g, color = age_cat)) +
   geom_jitter(height = 0, width = 0.3) +
@@ -65,6 +65,17 @@ p.rhino <- df1 %>%
   theme_bw() +
   theme(strip.background = element_rect(fill = "white"),
         strip.text = element_text(angle = 90))
-p.rhino
+p.rhino.m
 
+p.rhino.SVL <- df1 %>%
+  filter(species == "Furcifer rhinoceratus") %>%
+  ggplot(aes(x = sex, y = length_SVL_mm, color = age_cat)) +
+  geom_jitter(height = 0, width = 0.3) +
+  #facet_grid(rows = vars(sex)) +
+  scale_color_viridis_d(na.value = "gray50") +
+  scale_shape_discrete(na.value = 18) +
+  theme_bw() +
+  theme(strip.background = element_rect(fill = "white"),
+        strip.text = element_text(angle = 90))
+p.rhino.SVL
 
